@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema IoT de monitoramento de nível de reservatório.">
+    <title>Monitoramento IoT | Reservatório</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="marca">
+            <div class="icone-marca">💧</div>
+            <div>
+                <h1>Water Monitor</h1>
+                <p>Sistema de Monitoramento IoT</p>
+            </div>
+        </div>
+
+        <div class="conexao">
+            <span id="indicador-conexao" class="ponto"></span>
+            <span id="status-conexao">Conectando...</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="introducao">
+            <div>
+                <span class="identificacao">MONITORAMENTO INTELIGENTE</span>
+                <h2>Reservatório de Água</h2>
+                <p>Acompanhamento das condições do reservatório em tempo real.</p>
+            </div>
+
+            <div class="dispositivo">
+                <span>Dispositivo monitorado</span>
+                <strong>ESP32_RESERVATORIO_01</strong>
+            </div>
+        </section>
+
+        <section id="painel-alerta" class="painel-alerta normal">
+            <span id="icone-alerta">✓</span>
+            <div>
+                <strong id="titulo-alerta">Sistema em funcionamento</strong>
+                <p id="mensagem-alerta">Aguardando leitura do sensor.</p>
+            </div>
+        </section>
+
+        <section class="indicadores">
+
+            <article class="card nivel-card">
+                <div class="card-cabecalho">
+                    <span>Nível do reservatório</span>
+                    <span class="icone-card">💧</span>
+                </div>
+
+                <div class="nivel-valor">
+                    <strong id="nivel-atual">--</strong>
+                    <span>%</span>
+                </div>
+
+                <div class="barra-fundo">
+                    <div id="barra-nivel" class="barra-nivel"></div>
+                </div>
+
+                <p>Percentual de água disponível</p>
+            </article>
+
+            <article class="card">
+                <div class="card-cabecalho">
+                    <span>Distância do sensor</span>
+                    <span class="icone-card">📏</span>
+                </div>
+
+                <div class="valor-secundario">
+                    <strong id="distancia-atual">--</strong>
+                    <span>cm</span>
+                </div>
+
+                <p>Distância medida até a superfície da água</p>
+            </article>
+
+            <article class="card">
+                <div class="card-cabecalho">
+                    <span>Última atualização</span>
+                    <span class="icone-card">🕒</span>
+                </div>
+
+                <div class="valor-data">
+                    <strong id="ultima-data">--</strong>
+                    <span id="ultima-hora">Aguardando dados</span>
+                </div>
+
+                <p>Horário da última leitura recebida</p>
+            </article>
+
+        </section>
+
+        <section class="card historico-card">
+            <div class="secao-cabecalho">
+                <div>
+                    <h3>Histórico de monitoramento</h3>
+                    <p>Acompanhamento das leituras recebidas pela API.</p>
+                </div>
+
+                <button id="botao-atualizar" type="button">
+                    ↻ Atualizar
+                </button>
+            </div>
+
+            <div class="grafico-container">
+                <canvas id="grafico-historico"></canvas>
+            </div>
+        </section>
+
+        <section class="card tabela-card">
+            <div class="secao-cabecalho">
+                <div>
+                    <h3>Registros de leituras</h3>
+                    <p>Dados armazenados no banco de dados.</p>
+                </div>
+
+                <span id="total-registros">0 registros</span>
+            </div>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data e horário</th>
+                            <th>Dispositivo</th>
+                            <th>Nível (%)</th>
+                            <th>Distância (cm)</th>
+                            <th>Condição</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="corpo-historico">
+                        <tr>
+                            <td colspan="5" class="sem-dados">
+                                Aguardando dados da API...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <p>Projeto acadêmico de Internet das Coisas (IoT)</p>
+            <p>ESP32 + Sensor Simulado + API REST + Supabase</p>
+            <span>Monitoramento de Reservatório de Água</span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
