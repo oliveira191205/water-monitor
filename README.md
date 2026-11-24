@@ -106,7 +106,7 @@ O projeto utiliza uma API REST hospedada no Supabase.
 
 A função recebe as leituras enviadas pelo ESP32, realiza o processamento necessário e permite que os registros sejam armazenados e consultados pelo frontend.
 
-As configurações e credenciais necessárias para a execução devem ser fornecidas separadamente. Chaves secretas, senhas e informações privadas não devem ser publicadas no repositório.
+As configurações e credenciais para a execução devem ser fornecidas separadamente. Chaves secretas, senhas e informações privadas não devem ser publicadas no repositório.
 
 ### 3. Execução do frontend localmente
 
