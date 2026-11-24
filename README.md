@@ -104,9 +104,9 @@ O projeto utiliza uma API REST hospedada no Supabase.
 
 `https://hctuxkfpmvyasmewelsv.supabase.co/functions/v1/monitoramento-reservatorio`
 
-A função recebe as leituras enviadas pelo ESP32, realiza o processamento necessário e permite que os registros sejam armazenados e consultados pelo frontend.
+A função recebe as leituras enviadas pelo ESP32, valida os dados recebidos e realiza o armazenamento das informações no banco de dados. Também permite consultar as leituras registradas, que são utilizadas pelo frontend para apresentar os dados do monitoramento.
 
-As configurações e credenciais para a execução devem ser fornecidas separadamente. Chaves secretas, senhas e informações privadas não devem ser publicadas no repositório.
+As configurações e credenciais necessárias para a execução devem ser fornecidas separadamente. Chaves secretas, senhas e informações privadas não devem ser publicadas no repositório.
 
 ### 3. Execução do frontend localmente
 
