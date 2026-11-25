@@ -1,0 +1,6 @@
+# Trecho para supabase/config.toml.
+# A função usa autenticação própria pelo cabeçalho x-api-key.
+# Não duplique esta seção se ela já existir no arquivo.
+
+[functions.monitoramento-reservatorio]
+verify_jwt = false
