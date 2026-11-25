@@ -147,7 +147,7 @@ Essas situações foram consideradas na avaliação do funcionamento e das limit
 - **Repositório GitHub:** [https://github.com/oliveira191205/water-monitor](https://github.com/oliveira191205/water-monitor)
 - **Projeto Wokwi:** [https://wokwi.com/projects/481523852271733761](https://wokwi.com/projects/481523852271733761)
 - **Painel Web:** [https://oliveira191205.github.io/water-monitor/](https://oliveira191205.github.io/water-monitor/)
-- **Vídeo de demonstração:** [ https://youtu.be/zf5F1mVesUc]
+- **Vídeo de demonstração:** [https://youtu.be/zf5F1mVesUc]
 
 ## 👥 Integrantes e contribuições
 
